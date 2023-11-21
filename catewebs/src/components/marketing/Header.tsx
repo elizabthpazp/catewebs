@@ -53,7 +53,7 @@ export function Header({ stargazers_count }: { stargazers_count: number }) {
               href={item.href}
               className={clsx(
                 "body py-3 text-slate-11 border-violet-500",
-                pathname === item.href ? "border-b border-crimson-9" : ""
+                pathname === item.href ? "border-b border-purple-600" : ""
               )}
             >
               {item.name}

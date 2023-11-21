@@ -57,9 +57,7 @@ export function Generate({ user, featureLimits }: { user: any; featureLimits: Us
     <>
       {/* Greetings */}
       <div className="mt-16 flex flex-col items-center gap-3 lg:flex-row lg:justify-between lg:gap-0">
-        <h1 className="h4">
-          Hello <span className="text-crimson-9">{user?.name ? user.name : ""}</span>
-        </h1>
+     
         {featureLimits.limit && usedQuota < featureLimits.limit ? (
           <p>{`${usedQuota}/${featureLimits.limit} copy remaining`}</p>
         ) : (

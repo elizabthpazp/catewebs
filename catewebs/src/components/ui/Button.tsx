@@ -10,12 +10,12 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "rounded-[4px] bg-crimson-9 py-1 px-3 text-white hover:bg-crimson-10",
+        primary: "rounded-[4px] py-1 px-3 text-white hover:bg-crimson-10",
         secondary:
-          "rounded-[4px] bg-crimson-3 py-1 px-3 text-crimson-11 hover:bg-crimson-4 ring-1 ring-inset ring-crimson-6",
+          "rounded-[4px] py-1 px-3 text-crimson-11 hover:bg-crimson-4 ring-1 ring-inset ring-crimson-6",
         outline:
           "rounded-[4px] py-1 px-3 bg-slate-2 ring-1 ring-inset ring-slate-6 text-slate-11 hover:bg-slate-3 hover:text-slate-12",
-        text: "text-crimson-9 hover:text-crimson-10",
+        text: "hover:text-crimson-10",
       },
     },
     defaultVariants: {
