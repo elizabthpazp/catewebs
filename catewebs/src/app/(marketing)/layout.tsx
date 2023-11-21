@@ -15,8 +15,6 @@ export default async function MarketingLayout({ children }: MarketingLayoutProps
   const data = await res.json();
 
   const stargazers_count: number = data.stargazers_count;
-
-  console.log(data);
   return (
     <>
       <Header stargazers_count={stargazers_count} />

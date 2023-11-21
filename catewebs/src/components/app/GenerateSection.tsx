@@ -27,8 +27,7 @@ export function Generate({ user, featureLimits }: { user: any; featureLimits: Us
       },
       onFinish: async (prompt, completion) => {
         setUsedQuota(usedQuota + 1);
-        try {
-          console.log(completion);
+        try { 
           const res = await fetch("/api/save-completion", {
             method: "POST",
             headers: {
@@ -40,12 +39,10 @@ export function Generate({ user, featureLimits }: { user: any; featureLimits: Us
           if (!res.ok) {
             throw new Error(res.statusText);
           }
-        } catch (error) {
-          console.log(error);
+        } catch (error) { 
         }
       },
-    });
-  console.log(completion);
+    }); 
 
   function clearGeneration() {
     setInput("");

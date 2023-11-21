@@ -79,7 +79,7 @@ export const SocialMedia = ({ count }: { count: number }) => {
   return (
     <div className="flex">
       <Link
-        href="https://github.com/tierrun/tier-vercel-openai"
+        href="https://instagram.com/catewebs"
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium text-slate-12 hover:border-slate-8 hover:bg-slate-4"
       >
         <InstagramIcon className="h-5 w-5 fill-slate-12" />

@@ -1,18 +1,16 @@
 {
-  "name": "tier-vercel-openai",
+  "name": "catewebs",
   "version": "1.0.0",
   "author": {
-    "name": "Tier",
-    "url": "https://tier.run"
+    "name": "elizabthpazp",
+    "url": "https://elizabthpazp.github.io"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "prisma db push && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate",
-    "commit": "cz",
-    "knip": "knip"
+    "postinstall": "next generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",

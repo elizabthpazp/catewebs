@@ -6,13 +6,9 @@ interface AuthLayoutProps {
 }
 
 export default async function AppLayout({ children }: AuthLayoutProps) {
-  const res = await fetch("https://api.github.com/repos/tierrun/tier-vercel-openai", {
-    method: "GET",
-    next: { revalidate: 60 },
-  });
-  const data = await res.json();
+ 
 
-  const stargazers_count: number = data.stargazers_count;
+  const stargazers_count: number = 0;
   return (
     <>
       <Header stargazers_count={stargazers_count} />
