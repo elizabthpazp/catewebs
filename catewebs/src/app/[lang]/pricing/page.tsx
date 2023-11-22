@@ -4,17 +4,26 @@ import { BgPattern } from "@/components/ui/Bgpattern";
 import { SignUpButton } from "@/components/marketing/pricing/LandingSignUp";
 import { CheckBoxIcon } from "@/res/icons/CheckBoxIcon";
 import { PricingTableData } from "@/types";
+import { getDictionary } from "../../../../get-dictionary";
+import { Locale } from "../../../../i18n-config";
 
 export const metadata: Metadata = {
   title: "Pricing",
 };
 
-export default async function PricingPage() {
+export default async function PricingPage({
+  params: { lang, slug },
+}: {
+  params: { lang: Locale; slug: any };
+}) {
+  
+  const dictionary = await getDictionary(lang) 
+  
   const pricing: PricingTableData[]= [
     {
       planId: 'ee',
   currency: 'USD', // usd
-  interval: 'monthly',// monthly
+  interval: dictionary.month,// monthly
   promoted: false,
   name: 'test',
   base: 1000,
@@ -24,7 +33,7 @@ export default async function PricingPage() {
     {
       planId: 'ee',
   currency: 'USD', // usd
-  interval: 'monthly',// monthly
+  interval: dictionary.month,// monthly
   promoted: true,
   name: 'test',
   base: 2000,
@@ -34,7 +43,7 @@ export default async function PricingPage() {
     {
       planId: 'ee',
   currency: 'USD', // usd
-  interval: 'monthly',// monthly
+  interval: dictionary.month,// monthly
   promoted: false,
   name: 'test',
   base: 1500,
@@ -43,10 +52,9 @@ export default async function PricingPage() {
     }
   ];
   return (
-    <>
-      {/* Bg Pattern */}
+    <> 
       <BgPattern />
-      {/* Hero Copy */}
+      
       <div className="mt-16 flex flex-col items-center gap-4">
         <h1 className="md:h1 h2 w-full px-4 text-center md:w-[805px] md:px-0">
           Easy & flexible pricing
@@ -73,14 +81,14 @@ export default async function PricingPage() {
                   <h5 className="text-[32px] font-bold leading-9">${plan.base / 100}</h5>
                   <div className="flex flex-col items-start">
                     <span className="caption">{plan.currency.toUpperCase()}</span>
-                    <span className="caption-s text-slate-11">Billed {plan.interval}</span>
+                    <span className="caption-s text-slate-11">{dictionary.for} {plan.interval}</span>
                   </div>
                 </div>
               </div>
               {plan.promoted ? (
-                <SignUpButton type="primary">Quiero esta oferta</SignUpButton>
+                <SignUpButton type="primary">{dictionary.offertsBtn}</SignUpButton>
               ) : (
-                <SignUpButton type="outline">Quiero esta oferta</SignUpButton>
+                <SignUpButton type="outline">{dictionary.offertsBtn}</SignUpButton>
               )}
 
               <div className="flex flex-col gap-4">

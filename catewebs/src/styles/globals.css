@@ -64,3 +64,39 @@
     @apply font-sans text-[12px] font-semibold leading-[16px] tracking-[0%];
   }
 }
+
+  
+.switch-lang { 
+  cursor: pointer;   
+}
+.switch-lang:hover .lang-dropdown {
+  display: block;
+} 
+.current-lang { 
+  padding: 2px 5px 5px 5px;
+  border-radius: 10px;
+}
+.lang-flag {
+  width: 25px;
+  display: inline-block;
+}
+.lang-text {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.lang-dropdown {
+  display: none; 
+  border-radius: 10px; 
+}
+.selecting-lang {
+  padding: 3px 5px 3px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.selecting-lang:hover {
+  background: #63788c;
+}
+  

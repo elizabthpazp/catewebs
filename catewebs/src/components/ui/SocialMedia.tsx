@@ -75,7 +75,7 @@ function FacebookIcon(props: any) {
   );
 }
 
-export const SocialMedia = ({ count }: { count: number }) => {
+export const SocialMedia = () => {
   return (
     <div className="flex">
       <Link

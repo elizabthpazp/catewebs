@@ -1,0 +1,20 @@
+{
+    "menu":{
+      "home": "Inicio",
+      "offers": "Ofertas"
+    },
+    "metaTitle": "Desarrollo Web | Marketing Digital | SEO | Diseño",
+    "metaDescription": "CateWebs: Creamos tu propiedad digital",
+    "title": "Creamos tu",
+    "title1": "Propiedad digital", 
+    "subtitle": "Contamos con expertos en Desarrollo web, Diseño, Marketing Digital, SEO, Analítica web, entre muchos otros para impulsar tu marca.",
+    "request": "Contacta con nosotros",
+    "cta": "¡Empieza ahora!",
+    "copy": "Reservados todos los derechos.",
+    "free": "Asesoramiento gratuito", 
+    "offertsBtn": "Quiero esta oferta",
+    "notFound": "No se encontraron resultados",
+    "titlePricing":"Precios",
+    "for":"por",
+    "month": "Mensual"
+}

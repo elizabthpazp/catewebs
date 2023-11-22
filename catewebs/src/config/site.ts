@@ -2,11 +2,11 @@ import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "CateWebs: Creamos tu propiedad digital",
-  description: "CateWebs: Creamos tu propiedad digital",
-  url: "https://elizabthpazp.github.io",
+  description: "Desarrollo Web | Marketing Digital | SEO | Diseño",
+  url: "https://catewebs.vercel.app",
   ogImage: "",
   links: {
     twitter: "",
-    github: "",
+    github: "https://github.com/elizabthpazp/catewebs",
   }, 
 };

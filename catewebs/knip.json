@@ -1,9 +1,7 @@
 {
   "next": {
     "entry": [
-      "next.config.{js,ts,cjs,mjs}",
-      "pages/**/*.{js,jsx,ts,tsx}",
-      "src/pages/**/*.{js,jsx,ts,tsx}",
+      "next.config.{js,ts,cjs,mjs}", 
       "app/**/*.{js,jsx,ts,tsx}",
       "src/app/**/*.{js,jsx,ts,tsx}"
     ]

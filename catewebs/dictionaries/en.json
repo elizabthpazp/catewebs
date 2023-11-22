@@ -1,0 +1,20 @@
+{
+     "menu":{
+      "home": "Home",
+      "offers": "Offers"
+     },
+     "metaTitle": "Web Development | Digital Marketing | SEO | Design",
+     "metaDescription": "CateWebs: We create your digital property",
+     "title": "We create your",
+     "title1": "Digital property",
+     "subtitle": "We have experts in Web Development, Design, Digital Marketing, SEO, Web Analytics, among many others to boost your brand.",
+     "request": "Contact us",
+     "cta": "Start now!",
+     "copy": "All rights reserved.",
+     "free": "Free advice",
+     "offertsBtn": "I want this offer",
+     "notFound": "No results found",
+     "titlePricing":"Pricing",
+     "for":"by",
+     "month": "Monthly"
+}

@@ -6,21 +6,21 @@ import { usePathname } from "next/navigation";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-
-import { SocialMedia } from "@/components/ui/SocialMedia";
-import { SignInButton } from "@/components/marketing/LandingSignIn";
+import { Locale } from '../../../i18n-config'
+import { SocialMedia } from "@/components/ui/SocialMedia"; 
 import { SignUpButton } from "@/components/marketing/LandingSignUp"; 
+import { getDictionary } from "../../../get-dictionary";
+import { links } from "../../../links-web";
+import LocaleSwitcher from "../LocaleSwitcher";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Ofertas", href: "/pricing" },
-];
-
-export function Header({ stargazers_count }: { stargazers_count: number }) {
+export function Header({ lang, offertsBtn , home , offers }: { lang: Locale, offertsBtn: string, home: string, offers: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  let pathname = usePathname();
-
+  const navigation = [
+    { name: home, href: `/${lang}` },
+    { name: offers, href: `/${lang}/pricing` },
+  ];
+  let pathname = usePathname(); 
   return (
     <header className="border-b border-slate-6 bg-slate-1/5 py-3 backdrop-blur-lg lg:py-0">
       <nav
@@ -31,10 +31,13 @@ export function Header({ stargazers_count }: { stargazers_count: number }) {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">CateWebs</span>
             <div className="flex gap-2">
-              <img className="pt-1 pb-1" src="/logo.png" width={50} height={50}></img>
-              <span className="body-semibold pt-5">CateWebs</span>
+              <img className="pt-1 pb-1" src="/logo.png" alt={links.username} title={links.username} width={50} height={50}></img>
+              <span className="body-semibold pt-5 light:text-gray-600 dark:text-gray-500">CateWebs</span>
             </div>
           </Link> 
+          
+          <LocaleSwitcher actual={lang} classNameProp={'mt-1 switch-lang ml-8 mr-1'} />
+          <ThemeSwitcher classNameProp={'cursor-pointer mr-8'}/>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -61,7 +64,7 @@ export function Header({ stargazers_count }: { stargazers_count: number }) {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-5">
-        <SocialMedia count={stargazers_count} /> 
+        <SocialMedia /> 
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -71,11 +74,11 @@ export function Header({ stargazers_count }: { stargazers_count: number }) {
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">CateWebs</span>
               <div className="flex gap-2">
-              <img className="pt-1 pb-1" src="/logo.png" width={50} height={50}></img>
+              <img className="pt-1 pb-1" src="/logo.png" alt={links.username} title={links.username} width={50} height={50}></img>
                 <span className="body-semibold pt-4">CateWebs</span>
               </div>
             </Link>
-            <SocialMedia count={stargazers_count} />
+            <SocialMedia />
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-slate-6">
@@ -91,7 +94,7 @@ export function Header({ stargazers_count }: { stargazers_count: number }) {
                 ))}
               </div>
               <div className="flex flex-col gap-3 py-6"> 
-                <SignUpButton className="w-100 bg-purple-600 hover:bg-purple-500 rounded-2xl" />
+                <SignUpButton title={offertsBtn} className="w-100 bg-purple-600 hover:bg-purple-500 rounded-2xl" />
               </div>
             </div>
           </div>
