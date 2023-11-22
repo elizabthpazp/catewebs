@@ -65,6 +65,10 @@
   }
 }
 
+body{
+  overflow-x: hidden;
+}
+
   
 .switch-lang { 
   cursor: pointer;   

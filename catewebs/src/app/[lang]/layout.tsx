@@ -8,12 +8,13 @@ import {Header} from "@/components/marketing/Header";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer";
 import { getDictionary } from "../../../get-dictionary";
+import { links } from "../../../links-web";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 } 
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {  
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -32,11 +33,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "elizabthpazp",
-      url: "https://elizabthpazp.github.io",
+      name: links.username,
+      url: "https://github.com/elizabthpazp/catewebs",
     },
   ],
-  creator: "elizabthpazp",
+  creator: links.username,
   metadataBase: new URL(siteConfig.url),
   alternates: {
     canonical: "/",
@@ -52,13 +53,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/logo.png"],
-    creator: "elizabthpazp",
+    images: [links.logo],
+    creator: links.username,
   },
   icons: {
-    icon: "/favicons/favicon.ico",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: links.icon,
+    shortcut: links.logo,
+    apple: links.logo,
   },
   manifest: `${siteConfig.url}/favicons/site.webmanifest`,
 };

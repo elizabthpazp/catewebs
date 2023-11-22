@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-import { i18n } from './i18n-config'
+import { i18n } from '../i18n-config'
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
@@ -25,8 +25,7 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export function middleware(request: NextRequest) {
-  console.log('eee')
+export function middleware(request: NextRequest) { 
   const pathname = request.nextUrl.pathname
 
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
@@ -40,8 +39,7 @@ export function middleware(request: NextRequest) {
   // )
   //   return
 
-  // Check if there is any supported locale in the pathname
-  console.log(pathname)
+  // Check if there is any supported locale in the pathname 
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )

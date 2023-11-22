@@ -4,7 +4,60 @@ import { BgPattern } from "@/components/ui/Bgpattern";
 import { SignUpButton } from "@/components/marketing/LandingSignUp";
 import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
-import { links } from "../../../links-web";
+import { links } from "../../../links-web"; 
+
+export async function generateMetadata({
+  params: { lang, slug },
+}: {
+  params: { lang: Locale; slug: any };
+}) {
+  let ogimage = links.logo, sitename = links.username;
+  const dictionary = await getDictionary(lang) 
+  let titleMeta = dictionary.metaDescription, descriptionMeta = dictionary.metaTitle;
+  return {   
+    title: titleMeta,
+    description: descriptionMeta,
+    icons: {
+      icon: links.icon,
+    },
+    canonical: links.domain,
+    amphtml: links.domain,
+    keywords: [
+      "catewebs",
+      "web development",
+      "desarrollo web",
+      "diseño web",
+      "marketing digital",
+      "seo",
+      "elizabthpazp",
+      "development",
+      "website",
+    ],
+    openGraph: { 
+     images: [ogimage],
+     title: titleMeta,
+     description: descriptionMeta,
+     url: links.domain,
+     siteName: sitename,
+     locale: lang == 'en' ? "en_US" : "es_ES",
+     type: "website",
+     link: {
+      canonical: links.domain +"/"+slug, 
+      amphtml: links.domain +"/"+slug,
+     }  
+    },
+    twitter: { 
+     card: "summary_large_image",
+     images: [ogimage],
+     title: titleMeta,
+     description: descriptionMeta,
+    },
+    link: {
+      canonical: links.domain +"/"+slug, 
+      amphtml: links.domain +"/"+slug,
+     }  
+  };
+}
 
 export default async function IndexPage({
   params: { lang, slug },
