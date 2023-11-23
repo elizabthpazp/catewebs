@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -31,7 +32,7 @@ export function Header({ lang, offertsBtn , home , offers, services , about }: {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">CateWebs</span>
             <div className="flex gap-2">
-              <img className="pt-1 pb-1" src={links.logo} alt={links.username} title={links.username} width={50} height={50}></img>
+              <Image className="py-1" src={links.logo} alt={links.username} title={links.username} width={50} height={50}></Image>
               <span className="body-semibold pt-5 light:text-gray-600 dark:text-gray-500">CateWebs</span>
             </div>
           </Link> 
@@ -75,7 +76,7 @@ export function Header({ lang, offertsBtn , home , offers, services , about }: {
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">CateWebs</span>
               <div className="flex gap-2">
-              <img className="pt-1 pb-1" src={links.logo} alt={links.username} title={links.username} width={50} height={50}></img>
+              <Image className="py-1" src={links.logo} alt={links.username} title={links.username} width={50} height={50}></Image>
                 <span className="body-semibold pt-5 text-white">CateWebs</span>
               </div>
             </Link> 

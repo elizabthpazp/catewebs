@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 import { BgPattern } from "@/components/Bgpattern"; 
 import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
@@ -78,7 +78,7 @@ export default async function IndexPage({
     <> 
       <BgPattern /> 
       <div className="mt-6 flex flex-col items-center gap-4">
-        <img src={links.logo} alt={links.username} title={links.username} width={150} height={150}></img>
+        <Image src={links.logo} alt={links.username} title={links.username} width={150} height={150} />
         <div className="md:display h2 w-full px-4 text-center md:w-[802px] md:px-0">
          <h1 className="light:text-gray-800 dark:text-white text-gray-800"> {dictionary.title}</h1> 
          <h1 className="light:text-purple-600 dark:text-purple-500 text-purple-500"> {dictionary.title1}</h1>

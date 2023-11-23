@@ -8,7 +8,7 @@ export const Card = ({
     icon: string ,
   }) => {
     return (
-        <div className="relative w-auto mr-4 ml-4 max-w-[350px] min-h-fit text-center justify-center flex flex-col mt-6 text-gray-700 bg-white shadow-xl w-96 rounded-xl bg-clip-border light:bg-purple-300 dark:bg-slate-2 bg-purple-300 light:text-gray-700 dark:text-white text-gray-700 border-2 border-purple-600">
+        <div className="relative w-auto mx-4 max-w-[350px] min-h-fit text-center justify-center flex flex-col mt-6 text-gray-700 shadow-xl rounded-xl bg-clip-border light:bg-purple-300 dark:bg-slate-2 bg-purple-300 light:text-gray-700 dark:text-white text-gray-700 border-2 border-purple-600">
         <div className="p-6 mb-3 text-center justify-center">
           <div className="imageCard mb-2">
 
@@ -37,7 +37,7 @@ export const Card = ({
           <h5 className="block mb-2 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
            {title}
           </h5>
-          <p className="block font-sans light:text-gray-700 dark:text-gray-300 text-gray-700 antialiased font-semibold leading-relaxed text-inherit">
+          <p className="block font-sans light:text-gray-700 dark:text-gray-300 text-gray-700 antialiased font-semibold leading-relaxed">
             {description}
           </p>
         </div> 
