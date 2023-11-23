@@ -4,11 +4,12 @@ import { Metadata } from "next";
 import { i18n, Locale } from '../../../i18n-config'
 import { siteConfig } from "@/config/site";
 import { dm_sans, inter } from "@/fonts"; 
-import {Header} from "@/components/marketing/Header";
+import {Header} from "@/components/Header";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer";
 import { getDictionary } from "../../../get-dictionary";
 import { links } from "../../../links-web";
+import Whatsapp from "@/components/Whatsapp";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -69,12 +70,13 @@ export default async function RootLayout({ children, params }: { children: React
   return (
     <html lang={params.lang} className={`${inter.variable} ${dm_sans.variable}`} suppressHydrationWarning>
       
-      <body className="font-sans text-slate-12 light:bg-[#4D4D4D] light:text-black dark:bg-slate-1 dark:text-white">
+      <body className="font-sans light:bg-white dark:bg-slate-1 light:text-gray-800 dark:text-white text-gray-800">
       <Providers>
-        <Header lang={params.lang} offertsBtn={dictionary.offertsBtn} home={dictionary.menu.home} offers={dictionary.menu.offers} />
+        <Header lang={params.lang} offertsBtn={dictionary.request} home={dictionary.menu.home} offers={dictionary.menu.offers} services={dictionary.menu.services} about={dictionary.menu.about} />
         {children}
         <Footer copy={dictionary.copy} />
       </Providers>
+      <Whatsapp /> 
       </body>
     </html>
   );

@@ -1,10 +1,18 @@
 import Link from "next/link";
 
-import { BgPattern } from "@/components/ui/Bgpattern";
-import { SignUpButton } from "@/components/marketing/LandingSignUp";
+import { BgPattern } from "@/components/Bgpattern"; 
 import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
-import { links } from "../../../links-web"; 
+import { links } from "../../../links-web";
+import { Viewport } from 'next' 
+import { Card } from "@/components/Card";
+ 
+export const viewport: Viewport = { 
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false
+}
 
 export async function generateMetadata({
   params: { lang, slug },
@@ -20,7 +28,7 @@ export async function generateMetadata({
     icons: {
       icon: links.icon,
     },
-    canonical: links.domain,
+    canonical: links.domain+"/es",
     amphtml: links.domain,
     keywords: [
       "catewebs",
@@ -67,28 +75,33 @@ export default async function IndexPage({
   const dictionary = await getDictionary(lang) 
  
   return (
-    <>
-      {/* Bg Pattern */}
-      <BgPattern />
-      {/* Hero Copy */}
+    <> 
+      <BgPattern /> 
       <div className="mt-6 flex flex-col items-center gap-4">
-        <img src="/logo.png" alt={links.username} title={links.username} width={150} height={150}></img>
-        <h1 className="md:display h2 w-full px-4 text-center md:w-[802px] md:px-0">
-        {dictionary.title} <span className="text-purple-500"> {dictionary.title1}</span>
-        </h1> 
-        <p className="body-xl px-4 text-center text-slate-11 md:w-[872px] md:px-0">
-        {dictionary.subtitle}
-         </p> 
+        <img src={links.logo} alt={links.username} title={links.username} width={150} height={150}></img>
+        <div className="md:display h2 w-full px-4 text-center md:w-[802px] md:px-0">
+         <h1 className="light:text-gray-800 dark:text-white text-gray-800"> {dictionary.title}</h1> 
+         <h1 className="light:text-purple-600 dark:text-purple-500 text-purple-500"> {dictionary.title1}</h1>
+        </div> 
+        <p className="text-lg md:text-2xl xs:text-lg sm:text-lg px-4 text-center md:w-[872px] md:px-0 light:text-gray-700 dark:text-white text-gray-700">
+         {dictionary.subtitle}
+         </p>  
       </div>
-      {/* Hero CTA */}
-      <div className="mb-40 mt-20 flex flex-col items-center gap-4">
+     
+      <div className="mb-10 mt-20 flex flex-col items-center gap-4">
         <p>
          <span className="font-semibold h5"> {dictionary.request}</span>
         </p>
-        <div className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
-          <SignUpButton title={dictionary.cta} className="block bg-purple-600 hover:bg-purple-500 rounded-2xl" />
+        <div className="flex text-center flex-col items-center gap-2 md:flex-row md:gap-4">
+         <Link href={links.telegram} className="w-[200px] bg-purple-600 py-3 px-5 block h5 hover:bg-purple-500 rounded-2xl text-white">{dictionary.cta}</Link>
         </div>
-        <p className="text-slate-11"> {dictionary.free}</p>
+        <p className="light:text-gray-800 dark:text-gray-300 text-gray-800"> {dictionary.free}</p>
+      </div>
+
+      <div className="mb-40 flex flex-col items-center sm:flex-col xs:flex-col md:flex-row text-center justify-center">
+        <Card title={dictionary.cards.first.title} description={dictionary.cards.first.description} icon={'buy'}></Card>
+        <Card title={dictionary.cards.second.title} description={dictionary.cards.second.description} icon={'regard'}></Card>
+        <Card title={dictionary.cards.third.title} description={dictionary.cards.third.description} icon={''}></Card>
       </div>
     </>
   );

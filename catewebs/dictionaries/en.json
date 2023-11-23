@@ -1,7 +1,9 @@
 {
      "menu":{
       "home": "Home",
-      "offers": "Offers"
+      "offers": "Offers",
+      "services": "Services",
+      "about": "About"
      },
      "metaTitle": "Web Development | Digital Marketing | SEO | Design",
      "metaDescription": "CateWebs: We create your digital property",
@@ -11,10 +13,72 @@
      "request": "Contact us",
      "cta": "Start now!",
      "copy": "All rights reserved.",
-     "free": "Free advice",
+     "free": "Free advice!",
      "offertsBtn": "I want this offer",
+     "cards":{
+      "first": {
+         "title": "Choose from our products",
+         "description": "We offer a wide range of designs for your website, adapting it to your tastes and the needs of your clients. We provide a manual to learn how to use and manage it from anywhere."
+      },
+      "second": {
+        "title": "We can advise you!",
+        "description": "We have experts in Design, Digital Marketing, SEO, Web Analytics, Social Media, Branding, among many others to boost your brand. We offer quality advice."
+        },
+     "third": {
+      "title": "We make your ideas come true!!",
+      "description": "We have various strategic services to grow your business in the digital world, don't hesitate for a second longer."
+    }
+    },
      "notFound": "No results found",
      "titlePricing":"Pricing",
      "for":"by",
-     "month": "Monthly"
+     "month": "Month",
+     "pricing": "Easy & flexible pricing",
+     "pricingDesc": "Whatever web you choose, you should know that we offer a user manual and free advice, as well as the best marketing texts.",
+     "packages":{
+          "first": {
+            "title": "LandingPage",
+            "description1": "1 page layout",
+            "description2": "Company information",
+            "description3": "Contact form",
+            "description4": "Whatsapp button",
+            "description5": "Logo Design",
+            "description6": "Location on Google Maps",
+            "description7": "Custom Stiker Pack",
+            "description8": "Instagram feed design"
+          },
+          "second": {
+            "title": "Corporate/Professional Website",
+            "description1": "5 section layout on 1 page or 5 pages",
+            "description2": "Company information",
+            "description3": "Contact form",
+            "description4": "Whatsapp button",
+            "description5": "Logo Design",
+            "description6": "Location on Google Maps",
+            "description7": "Social media link",
+            "description8": "Service sample",
+            "description9": "Image Carousells",
+            "description10": "Domain & Hosting to consult",
+            "description11": "Custom Stiker Pack",
+            "description12": "Instagram feed layout",
+            "description13": "Technical support 1 week"
+          },
+          "third": {
+            "title": "Ecommerce",
+            "description1": "5 section layout on 1 page or 5 pages",
+            "description2": "Load of 20 products",
+            "description3": "Category creation",
+            "description4": "Payment Platforms and Gateway",
+            "description5": "Control Panel",
+            "description6": "Order Management",
+            "description7": "Your business on Google",
+            "description8": "Service sample",
+            "description9": "Image Carousells",
+            "description10": "Domain & Hosting to consult",
+            "description11": "Logo Design",
+            "description12": "Location on Google Maps",
+            "description13": "Custom Stiker Pack",
+            "description14": "Instagram feed design"
+          }
+     }
 }

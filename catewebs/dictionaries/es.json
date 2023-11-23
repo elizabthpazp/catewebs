@@ -1,7 +1,9 @@
 {
     "menu":{
       "home": "Inicio",
-      "offers": "Ofertas"
+      "offers": "Ofertas",
+      "services": "Servicios",
+      "about": "Sobre nosotros"
     },
     "metaTitle": "Desarrollo Web | Marketing Digital | SEO | Diseño",
     "metaDescription": "CateWebs: Creamos tu propiedad digital",
@@ -11,10 +13,72 @@
     "request": "Contacta con nosotros",
     "cta": "¡Empieza ahora!",
     "copy": "Reservados todos los derechos.",
-    "free": "Asesoramiento gratuito", 
+    "free": "Asesoramiento gratuito!", 
     "offertsBtn": "Quiero esta oferta",
+    "cards":{
+      "first": {
+         "title": "Escoja entre nuestros productos",
+         "description": "Ofrecemos diseños personalizables para tu sitio web y tus clientes. Obsequiamos un manual para aprender a utilizarlo y adminisrarlo desde cualquier lugar."
+      },
+      "second": {
+        "title": "Podemos asesorarte!",
+        "description": "Contamos con expertos en Diseño, Marketing Digital, SEO, Analítica web, Social Media, Branding, entre muchos otros para impulsar tu marca. Ofrecemos asesoramiento de calidad."
+        },
+     "third": {
+      "title": "Hacemos realidad tus ideas!!",
+      "description": "Tenemos variados servicios estratégicos para hacer crecer tu negocio en el mundo digital, no lo dudes ni un segundo más."
+    }
+    },
     "notFound": "No se encontraron resultados",
     "titlePricing":"Precios",
     "for":"por",
-    "month": "Mensual"
+    "month": "Mes",
+    "pricing": "Precios directos y flexibles",
+     "pricingDesc": "Cualquiera que sea la web que elijas, debes saber que ofrecemos manual de uso y asesoramiento gratuito, asi como los mejores textos de marketing.",
+    "packages":{
+      "first": {
+        "title": "LandingPage",
+        "description1": "Diseño de 1 página",
+        "description2": "Información de empresa",
+        "description3": "Formulario de contacto",
+        "description4": "Botón de Whatsapp",
+        "description5": "Diseño de Logotipo",
+        "description6": "Localización en Google Maps",
+        "description7": "Pack de Stikers personalizados",
+        "description8": "Diseño de feed de instagram"
+      },
+      "second": {
+        "title": "Web Corporativa/Profesional",
+        "description1": "Diseño de 5 secciones en 1 página o 5 páginas",
+        "description2": "Información de empresa",
+        "description3": "Formulario de contacto",
+        "description4": "Botón de Whatsapp",
+        "description5": "Diseño de Logo",
+        "description6": "Localización en Google Maps",
+        "description7": "Enlace a las redes sociales",
+        "description8": "Muestra de servicios",
+        "description9": "Carousells de Imágenes",
+        "description10": "Dominio & Hosting a consultar",
+        "description11": "Pack de Stikers personalizados",
+        "description12": "Diseño de feed de instagram",
+        "description13": "Soporte técnico 1 semana "
+      },
+      "third": {
+        "title": "Ecommerce",
+        "description1": "Diseño de 5 secciones en 1 página o 5 páginas",
+        "description2": "Carga de 20 productos",
+        "description3": "Creación de categorías",
+        "description4": "Plataformas y Pasarela de pagos",
+        "description5": "Panel de control",
+        "description6": "Administración de pedidos",
+        "description7": "Tu negocio en Google ",
+        "description8": "Muestra de servicios",
+        "description9": "Carousells de Imágenes",
+        "description10": "Dominio & Hosting a consultar",
+        "description11": "Diseño de Logotipo",
+        "description12": "Localización en Google Maps",
+        "description13": "Pack de Stikers personalizados",
+        "description14": "Diseño de feed de instagram"
+      }
+    }
 }

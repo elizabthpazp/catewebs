@@ -42,7 +42,7 @@ export function ThemeSwitcher({
  
 <div style={ theme == 'dark' ? {display: 'none'} : {display: 'block', marginTop:'1px'} }> 
  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	viewBox="0 0 612 612" width="30" height="30" fill="black">
+	viewBox="0 0 612 612" width="30" height="30" fill="#293133">
 <g>
 	<g id="_x37__5_">
 		<g>

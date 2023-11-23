@@ -2,7 +2,8 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [ "./src/**/*.{js,ts,jsx,tsx,mdx}",  
+  ], 
   theme: {
     fontSize: {
       "2xs": ["0.75rem", { lineHeight: "1.25rem" }],
@@ -56,6 +57,8 @@ module.exports = {
         },
       },
     },
-  },
+  }, 
+  darkMode: "class",  
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
 };
+ 
