@@ -20,6 +20,7 @@ export const links = {
     seo: "/SEO.jpg",
     desarrolloweb: "/diseno web.png",
     disenno: "/diseno.jpg",
-    sistemas: "/diseno sistema.png"
+    sistemas: "/diseno sistema.png",
+    finalImg: "/final.png"
 } as const
  

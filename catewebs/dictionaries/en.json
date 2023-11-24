@@ -15,6 +15,7 @@
      "copy": "All rights reserved.",
      "free": "Free advice!",
      "instagram": "Latest posts on instagram!",
+     "instagramDesc": "Follow us so you don't miss any offers or news!",
      "aboutTitle":"Who we are",
      "aboutSub": "A little more about us and history....",
      "aboutDescription1":"We are a digital agency that offers you various services to grow your business in this world.",
@@ -55,7 +56,7 @@
      "cards":{
       "first": {
          "title": "Choose from our products",
-         "description": "We offer a wide range of designs for your website, adapting it to your tastes and the needs of your clients. We provide a manual to learn how to use and manage it from anywhere."
+         "description": "We offer a wide range of designs for your site, adapting it to your tastes and the needs of your clients. We provide a manual to use and manage it from anywhere."
       },
       "second": {
         "title": "We can advise you!",
@@ -63,9 +64,10 @@
         },
      "third": {
       "title": "We make your ideas come true!!",
-      "description": "We have various strategic services to grow your business in the digital world, don't hesitate for a second longer."
+      "description": "We have various strategic services to grow your business in the digital world, combined with artificial intelligence."
     }
     },
+    "finalPhrase": "Art challenges technology and technology inspires art!",
      "notFound": "No results found",
      "titlePricing":"Pricing",
      "for":"by",
