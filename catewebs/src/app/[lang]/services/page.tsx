@@ -26,7 +26,7 @@ export async function generateMetadata({
   let sitename = links.username;
   const dictionary = await getDictionary(lang);
   return { 
-    title: dictionary.services + " | " + dictionary.metaDescription,
+    title: dictionary.servicesTitle + " | " + dictionary.metaDescription,
     description: dictionary.servicesDescript,
     icons: {
       icon: links.icon,
@@ -43,11 +43,11 @@ export async function generateMetadata({
       "elizabthpazp",
       "development",
       "website",
-      dictionary.services
+      dictionary.servicesTitle
     ],
     openGraph: { 
       images: [links.logo],
-      title: dictionary.services,
+      title: dictionary.servicesTitle,
       description: dictionary.servicesDescript,
       url: links.domain + "/services",
       siteName: sitename,
@@ -57,7 +57,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       images: [links.logo],
-      title: dictionary.services,
+      title: dictionary.servicesTitle,
       description: dictionary.servicesDescript, 
     },
     link: {
