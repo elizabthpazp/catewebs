@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from "next";
 import { i18n, Locale } from '../../../i18n-config'
 import { siteConfig } from "@/config/site";
@@ -77,6 +77,7 @@ export default async function RootLayout({ children, params }: { children: React
         <Footer copy={dictionary.copy} />
       </Providers>
       <Whatsapp /> 
+      <Analytics />
       </body>
     </html>
   );
