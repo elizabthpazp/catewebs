@@ -112,12 +112,12 @@ export default async function PricingPage({
 
       {/* Pricing */}
       <div className="my-16 flex flex-col items-center">
-        <div className="mx-auto flex flex-col items-start gap-6 md:flex-row">
+        <div className="mx-3 flex flex-col items-start gap-6 md:flex-row">
           {pricing.map((plan, planIndex) => (
             <div
               key={planIndex}
               className={clsx(
-                "flex h-auto w-[353px] flex-col gap-8 rounded-3xl light:bg-purple-300 dark:bg-slate-2 bg-purple-300 px-6 py-12 shadow-xl",
+                "flex h-auto w-full max-w-[353px] flex-col gap-8 rounded-3xl light:bg-purple-300 dark:bg-slate-2 bg-purple-300 px-6 py-12 shadow-xl",
                 plan.promoted === true ? "border-[3px] border-6 border-purple-500" : ""
               )}
             >

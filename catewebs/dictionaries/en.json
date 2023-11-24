@@ -9,11 +9,48 @@
      "metaDescription": "CateWebs: We create your digital property",
      "title": "We create your",
      "title1": "Digital property",
-     "subtitle": "We have experts in Web Development, Design, Digital Marketing, SEO, Web Analytics, among many others to boost your brand.",
+     "subtitle": "We are a digital agency that offers you various services to grow your business. Our experts will create a professional and effective website in less than 10 days",
      "request": "Contact us",
      "cta": "Start now!",
      "copy": "All rights reserved.",
      "free": "Free advice!",
+     "instagram": "Latest posts on instagram!",
+     "aboutTitle":"Who we are",
+     "aboutSub": "A little more about us and history....",
+     "aboutDescription1":"We are a digital agency that offers you various services to grow your business in this world.",
+     "aboutDescription2":"Specializing in the design and development of successful web strategies that are the result of the hard work of our talented designers, developers, SEO specialists, community managers and creative communication experts. Thus offering exceptional results and a significant impact in the digital world.",
+     "aboutDescription4": "Our mission is to enhance the growth and success of global businesses through innovative digital solutions, accompanying our clients on their path to online excellence.",
+     "aboutDescription5": "We want to become a globally recognized benchmark as leaders in the development of creative and effective digital solutions that transform the way businesses interact in the digital environment.",
+     "aboutDescription6": "Build a legacy of excellence and commitment, being the first option for those seeking to achieve and exceed their business objectives through digital strategies, thus marking a milestone in the evolution of the business ecosystem worldwide.",
+     "aboutDescription7": "Thank you for joining us on this journey!",
+     "servicesTitle": "Services",
+     "servicesDescript": "Specialists in Brand Strategy, Social Media and Web Development",
+     "services": {
+       "first": {
+         "title": "Web Design and Development",
+         "description": "HTML web pages"
+       },
+       "second": {
+         "title": "Digital Marketing",
+         "description": "Social media management"
+       },
+       "third": {
+         "title": "SEO",
+         "description": "Web positioning"
+       },
+       "four": {
+         "title": "Design",
+         "description": "Corporate Identity, posts for social networks, business cards"
+       },
+       "five": {
+         "title": "Online Store",
+         "description": "ECOMMERCE Store"
+       },
+       "six": {
+         "title": "System Design",
+         "description": "Databases and systems."
+       }
+     },
      "offertsBtn": "I want this offer",
      "cards":{
       "first": {

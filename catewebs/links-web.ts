@@ -14,6 +14,12 @@ export const links = {
     icon: "/favicons/favicon.ico",
     iconSpain: "/spain.webp",
     iconUsa: "/usa.webp",
-    iconLike: "/icons/amor.png"
+    iconLike: "/icons/amor.png",
+    tiendaOnline: "/tienda online.png",
+    marketing:"/marketing digital.png",
+    seo: "/SEO.jpg",
+    desarrolloweb: "/diseno web.png",
+    disenno: "/diseno.jpg",
+    sistemas: "/diseno sistema.png"
 } as const
  

@@ -5,7 +5,7 @@ import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 import { links } from "../../../links-web";
 import { Viewport } from 'next' 
-import { Card } from "@/components/Card";
+import { Card } from "@/components/Card"; 
  
 export const viewport: Viewport = { 
   width: 'device-width',
@@ -72,8 +72,7 @@ export default async function IndexPage({
 }: {
   params: { lang: Locale; slug: any };
 }) {
-  const dictionary = await getDictionary(lang) 
- 
+  const dictionary = await getDictionary(lang)  
   return (
     <> 
       <BgPattern /> 
@@ -103,6 +102,8 @@ export default async function IndexPage({
         <Card title={dictionary.cards.second.title} description={dictionary.cards.second.description} icon={'regard'}></Card>
         <Card title={dictionary.cards.third.title} description={dictionary.cards.third.description} icon={''}></Card>
       </div>
+
+    
     </>
   );
 }

@@ -9,11 +9,48 @@
     "metaDescription": "CateWebs: Creamos tu propiedad digital",
     "title": "Creamos tu",
     "title1": "Propiedad digital", 
-    "subtitle": "Contamos con expertos en Desarrollo web, Diseño, Marketing Digital, SEO, Analítica web, entre muchos otros para impulsar tu marca.",
+    "subtitle": "Somos una agencia digital que te ofrece variados servicios para hacer crecer tu negocio. Nuestros expertos crearán una página web profesional y efectiva en menos de 10 días",
     "request": "Contacta con nosotros",
     "cta": "¡Empieza ahora!",
     "copy": "Reservados todos los derechos.",
     "free": "Asesoramiento gratuito!", 
+    "instagram": "¡Últimas publicaciones en instagram!",
+    "aboutTitle":"Quiénes somos",
+    "aboutSub": "Un poco más sobre nosotros y nuestra historia....",
+    "aboutDescription1":"Somos una agencia digital que te ofrece variados servicios para hacer crecer tu negocio en este mundo.",
+    "aboutDescription2":"Especializada en el diseño y desarrollo de estrategias web exitosas que son resultado de trabajo árduo de nuestros talentosos diseñadores, desarrolladores, especialistas en SEO y expertos en marketing digital y comunicación creativa. Ofreciendo así resultados excepcionales y un impacto significativo en el mundo digital.",
+    "aboutDescription4": "Nuestra misión es potenciar el crecimiento y el éxito de los negocios a nivel global a través de soluciones digitales innovadoras, acompañando a nuestros clientes en su camino hacia la excelencia en línea.",  
+    "aboutDescription5": "Queremos convertirnos en un referente reconocido a nivel global como líderes en el desarrollo de soluciones digitales creativas y efectivas que transformen la forma en que los negocios interactúan en el entorno digital.",
+    "aboutDescription6": "Construir un legado de excelencia y compromiso, siendo la primera opción para quienes buscan alcanzar y superar sus objetivos comerciales a través de estrategias digitales, marcando así un hito en la evolución del ecosistema empresarial a nivel mundial.",
+    "aboutDescription7": "¡Gracias por acompañarnos en este viaje!",
+    "servicesTitle": "Servicios",
+    "servicesDescript": "Especialistas en Estrategia de marcas, Social Media y Desarrollo Web",
+    "services": {
+      "first": {
+        "title": "Diseño y Desarrollo Web",
+        "description": "Páginas web HTML"
+      },
+      "second": {
+        "title": "Marketing Digital",
+        "description": "Gestión de redes sociales"
+      }, 
+      "third": {
+        "title": "SEO",
+        "description": "Posicionamiento web"
+      },
+      "four": {
+        "title": "Diseño",
+        "description": "Identidad Corporativa, posts para redes sociales, tarjetas de presentación"
+      },
+      "five": {
+        "title": "Tienda Online",
+        "description": "Tienda ECOMMERCE"
+      },
+      "six": {
+        "title": "Diseño de sistemas",
+        "description": "Bases de datos y sistemas."
+      }
+    },
     "offertsBtn": "Quiero esta oferta",
     "cards":{
       "first": {
