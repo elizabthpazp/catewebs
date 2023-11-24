@@ -18,9 +18,55 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export const metadata: Metadata = {
-  title: "Services",
-};
+export async function generateMetadata({
+  params: { lang, slug },
+}: {
+  params: { lang: Locale; slug: any };
+}) {
+  let sitename = links.username;
+  const dictionary = await getDictionary(lang);
+  return { 
+    title: dictionary.services + " | " + dictionary.metaDescription,
+    description: dictionary.servicesDescript,
+    icons: {
+      icon: links.icon,
+    },
+    canonical: links.domain + "/services",
+    amphtml: links.domain + "/services",
+    keywords: [
+      "catewebs", 
+      "web development",
+      "desarrollo web",
+      "diseño web",
+      "marketing digital",
+      "seo",
+      "elizabthpazp",
+      "development",
+      "website",
+      dictionary.services
+    ],
+    openGraph: { 
+      images: [links.logo],
+      title: dictionary.services,
+      description: dictionary.servicesDescript,
+      url: links.domain + "/services",
+      siteName: sitename,
+      locale: lang == "en" ? "en_US" : "es_ES",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [links.logo],
+      title: dictionary.services,
+      description: dictionary.servicesDescript, 
+    },
+    link: {
+      canonical: links.domain + "/services",
+      amphtml: links.domain + "/services",
+    },
+  };
+}
+
 
 export default async function ServicesPage({
   params: { lang, slug },

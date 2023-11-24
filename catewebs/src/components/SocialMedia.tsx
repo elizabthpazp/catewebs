@@ -79,37 +79,37 @@ function FacebookIcon(props: any) {
 export const SocialMedia = () => {
   return (
     <div className="flex">
-      <Link
+      <Link target="_blank"
         href={links.instagram}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
         <InstagramIcon className="h-5 w-5" />  
       </Link>
-      <Link
+      <Link target="_blank"
         href={links.facebook}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <FacebookIcon className="h-5 w-5" /> 
       </Link>
-      <Link
+      <Link target="_blank"
         href={links.telegram}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <TelegramIcon className="h-5 w-5" />
       </Link>
-      <Link
+      <Link target="_blank"
         href={links.linkedin}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <LinkedinIcon className="h-5 w-5" />
       </Link>
-      <Link
+      <Link target="_blank"
         href={links.tiktok}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
         <TiktokIcon className="h-5 w-5" />
       </Link>
-      <Link
+      <Link target="_blank"
         href={links.github}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium"
       >

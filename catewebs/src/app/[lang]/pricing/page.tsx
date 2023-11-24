@@ -15,9 +15,54 @@ export const viewport: Viewport = {
   userScalable: false
 }
 
-export const metadata: Metadata = {
-  title: "Pricing",
-};
+export async function generateMetadata({
+  params: { lang, slug },
+}: {
+  params: { lang: Locale; slug: any };
+}) {
+  let sitename = links.username;
+  const dictionary = await getDictionary(lang);
+  return { 
+    title: dictionary.pricing + " | " + dictionary.metaDescription,
+    description: dictionary.pricingDesc,
+    icons: {
+      icon: links.icon,
+    },
+    canonical: links.domain + "/pricing",
+    amphtml: links.domain + "/pricing",
+    keywords: [
+      "catewebs", 
+      "web development",
+      "desarrollo web",
+      "diseño web",
+      "marketing digital",
+      "seo",
+      "elizabthpazp",
+      "development",
+      "website",
+      dictionary.pricing
+    ],
+    openGraph: { 
+      images: [links.logo],
+      title: dictionary.pricing,
+      description: dictionary.pricingDesc,
+      url: links.domain + "/pricing",
+      siteName: sitename,
+      locale: lang == "en" ? "en_US" : "es_ES",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [links.logo],
+      title: dictionary.pricing,
+      description: dictionary.pricingDesc, 
+    },
+    link: {
+      canonical: links.domain + "/pricing",
+      amphtml: links.domain + "/pricing",
+    },
+  };
+}
 
 export default async function PricingPage({
   params: { lang, slug },

@@ -1,7 +1,7 @@
 "use client";
 
 import { InstagramEmbed } from "react-social-media-embed";
-
+ 
 export const Instagram = () => {
   return (
     <div className="flex flex-col items-center sm:flex-col xs:flex-col md:flex-row gap-4" style={{ display: "flex", justifyContent: "center", zoom: "80%" }}>

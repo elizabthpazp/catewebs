@@ -16,9 +16,54 @@ export const viewport: Viewport = {
   userScalable: false
 }
 
-export const metadata: Metadata = {
-  title: "About us",
-};
+export async function generateMetadata({
+  params: { lang, slug },
+}: {
+  params: { lang: Locale; slug: any };
+}) {
+  let sitename = links.username;
+  const dictionary = await getDictionary(lang);
+  return { 
+    title: dictionary.aboutTitle + " | " + dictionary.metaDescription,
+    description: dictionary.aboutTitle,
+    icons: {
+      icon: links.icon,
+    },
+    canonical: links.domain + "/about",
+    amphtml: links.domain + "/about",
+    keywords: [
+      "catewebs", 
+      "web development",
+      "desarrollo web",
+      "diseño web",
+      "marketing digital",
+      "seo",
+      "elizabthpazp",
+      "development",
+      "website",
+      dictionary.aboutTitle
+    ],
+    openGraph: { 
+      images: [links.logo],
+      title: dictionary.aboutTitle,
+      description: dictionary.aboutTitle,
+      url: links.domain + "/about",
+      siteName: sitename,
+      locale: lang == "en" ? "en_US" : "es_ES",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [links.logo],
+      title: dictionary.aboutTitle,
+      description: dictionary.aboutTitle, 
+    },
+    link: {
+      canonical: links.domain + "/about",
+      amphtml: links.domain + "/about",
+    },
+  };
+}
 
 export default async function AboutPage({
   params: { lang, slug },
