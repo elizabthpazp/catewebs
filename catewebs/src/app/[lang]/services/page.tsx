@@ -130,9 +130,9 @@ export default async function ServicesPage({
                     <img className="rounded-full min-w-[100px]" src={service.image} alt={service.title} title={service.title} width={100} height={100}></img>
                   </div>
                   <div className="mt-2">
-                  <h5 className="block mb-2 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
+                  <p className="block mb-2 h4 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
                     {service.title}
-                  </h5>
+                  </p>
                   <p className="block font-sans light:text-gray-700 dark:text-gray-300 text-gray-700 antialiased font-semibold leading-relaxed">
                     {service.description}
                   </p>

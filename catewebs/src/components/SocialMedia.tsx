@@ -80,37 +80,37 @@ export const SocialMedia = () => {
   return (
     <div className="flex">
       <Link target="_blank"
-        href={links.instagram}
+        href={links.instagram} aria-label="Contact on Instagram"
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
         <InstagramIcon className="h-5 w-5" />  
       </Link>
-      <Link target="_blank"
+      <Link target="_blank" aria-label="Contact on Facebook"
         href={links.facebook}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <FacebookIcon className="h-5 w-5" /> 
       </Link>
       <Link target="_blank"
-        href={links.telegram}
+        href={links.telegram} aria-label="Contact on Telegram"
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <TelegramIcon className="h-5 w-5" />
       </Link>
       <Link target="_blank"
-        href={links.linkedin}
+        href={links.linkedin} aria-label="Contact on Linkedin"
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
          <LinkedinIcon className="h-5 w-5" />
       </Link>
-      <Link target="_blank"
+      <Link target="_blank" aria-label="Contact on Tiktok"
         href={links.tiktok}
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium hover:border-slate-8"
       >
         <TiktokIcon className="h-5 w-5" />
       </Link>
       <Link target="_blank"
-        href={links.github}
+        href={links.github} aria-label="View on GitHub"
         className="caption-s flex items-center gap-3 pt-2 px-2 py-[2px] font-medium"
       >
         <GithubIcon className="h-5 w-5" />

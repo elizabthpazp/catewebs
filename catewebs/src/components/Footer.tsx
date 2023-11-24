@@ -35,7 +35,7 @@ export default function Footer({
         <Link
           href={links.github} 
           className="group"
-          aria-label="TaxPal on GitHub"
+          aria-label="View on GitHub"
           target="_blank"
         >
           <svg

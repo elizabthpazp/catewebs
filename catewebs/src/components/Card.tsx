@@ -34,9 +34,9 @@ export const Card = ({
 				 M13.25,9.625v-2h3.418l-0.285,2H13.25z"/><circle cx="6.75" cy="17.125" r="1.5"/><circle cx="15.75" cy="17.125" r="1.5"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
 
           </div>
-          <h5 className="block mb-2 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
+          <p className="block mb-2 h4 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
            {title}
-          </h5>
+          </p>
           <p className="block font-sans light:text-gray-700 dark:text-gray-300 text-gray-700 antialiased font-semibold leading-relaxed">
             {description}
           </p>
