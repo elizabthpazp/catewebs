@@ -142,7 +142,9 @@ export default async function IndexPage({
         </p>
         </div>
         
-        <Instagram></Instagram>
+        <div className="items-center text-center center justify-center w-full flex flex-col">
+         <Instagram titleBtn={dictionary.instaBtn}></Instagram>
+        </div>
 
         <div className="mb-40 pt-40 flex flex-col items-center justify-center w-full text-center">  
         <h1 className="md:h1 h2 w-full px-4 text-center md:w-[805px] md:px-0 light:text-purple-600 dark:text-purple-500 text-purple-500">
