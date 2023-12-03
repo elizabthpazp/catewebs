@@ -15,12 +15,12 @@ export const links = {
     iconSpain: "/spain.webp",
     iconUsa: "/usa.webp",
     iconLike: "/icons/amor.webp",
-    tiendaOnline: "/tienda online.webp",
-    marketing:"/marketing digital.webp",
+    tiendaOnline: "/tienda-online.webp",
+    marketing:"/marketing-digital.webp",
     seo: "/SEO.webp",
-    desarrolloweb: "/diseno web.webp",
+    desarrolloweb: "/diseno-web.webp",
     disenno: "/diseno.webp",
-    sistemas: "/diseno sistema.webp",
+    sistemas: "/diseno-sistema.webp",
     finalImg: "/final.webp"
 } as const
  
