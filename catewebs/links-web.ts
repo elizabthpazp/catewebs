@@ -10,17 +10,17 @@ export const links = {
     discord: "https://discord.com/users/1062024233577893918",
     facebook: "https://www.facebook.com/catewebsdesign", 
     whatsapp: "https://api.whatsapp.com/send?phone=+5353152699&text=Hola%21%!",
-    logo: "/logo.png",
+    logo: "/logo.webp",
     icon: "/favicons/favicon.ico",
     iconSpain: "/spain.webp",
     iconUsa: "/usa.webp",
-    iconLike: "/icons/amor.png",
-    tiendaOnline: "/tienda online.png",
-    marketing:"/marketing digital.png",
-    seo: "/SEO.jpg",
-    desarrolloweb: "/diseno web.png",
-    disenno: "/diseno.jpg",
-    sistemas: "/diseno sistema.png",
-    finalImg: "/final.png"
+    iconLike: "/icons/amor.webp",
+    tiendaOnline: "/tienda online.webp",
+    marketing:"/marketing digital.webp",
+    seo: "/SEO.webp",
+    desarrolloweb: "/diseno web.webp",
+    disenno: "/diseno.webp",
+    sistemas: "/diseno sistema.webp",
+    finalImg: "/final.webp"
 } as const
  
