@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from "next";
+import Script from 'next/script';
 import { i18n, Locale } from '../../../i18n-config'
 import { siteConfig } from "@/config/site";
 import { dm_sans, inter } from "@/fonts"; 
@@ -9,7 +10,7 @@ import { Providers } from "./providers";
 import Footer from "@/components/Footer";
 import { getDictionary } from "../../../get-dictionary";
 import { links } from "../../../links-web";
-import Whatsapp from "@/components/Whatsapp";
+import Whatsapp from "@/components/Whatsapp"; 
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -67,6 +68,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode;  params: { lang: Locale } }) {
   const dictionary = await getDictionary(params.lang) 
+
   return (
     <html lang={params.lang} className={`${inter.variable} ${dm_sans.variable}`} suppressHydrationWarning>
       
@@ -78,6 +80,23 @@ export default async function RootLayout({ children, params }: { children: React
       </Providers>
       <Whatsapp /> 
       <Analytics />
+      
+      <Script id="metricool-script" strategy="afterInteractive">
+        {`
+          function loadScript(a) {
+            var b = document.getElementsByTagName("head")[0],
+                c = document.createElement("script");
+            c.type = "text/javascript";
+            c.src = "https://tracker.metricool.com/resources/be.js";
+            c.onreadystatechange = a;
+            c.onload = a;
+            b.appendChild(c);
+          }
+          loadScript(function() {
+            beTracker.t({ hash: "9364db0a5728ed519cb6d08aab2cc181" });
+          });
+        `}
+      </Script>
       </body>
     </html>
   );
