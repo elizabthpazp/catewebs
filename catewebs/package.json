@@ -23,6 +23,7 @@
     "ai": "^2.2.37",
     "clsx": "^1.2.1",
     "cva": "npm:class-variance-authority@^0.6.1",
+    "framer-motion": "^11.11.17",
     "lucide-react": "^0.256.0",
     "negotiator": "^0.6.4",
     "next": "^14.2.18",
