@@ -5,7 +5,7 @@ export const links = {
     username: "CateWebs",
     telegram: "https://t.me/elizabthpazp",
     instagram: "https://instagram.com/cate_webs/",
-    tiktok: "https://www.tiktok.com/@elizabthpazp",
+    tiktok: "https://www.tiktok.com/@elijs.dev",
     linkedin: "https://www.linkedin.com/in/elizabeth-de-la-paz-portal-4b864b209",
     discord: "https://discord.com/users/1062024233577893918",
     facebook: "https://www.facebook.com/catewebsdesign", 
