@@ -44,3 +44,7 @@
 {"timestamp":"2026-05-14T16:58:03.256Z","level":"info","message":"Tool invocation completed","correlationId":"0fb0139c-b4ce-4287-8330-977c93ebdb53","tool":"testsprite_generate_frontend_test_plan"}
 {"timestamp":"2026-05-14T16:58:19.003Z","level":"info","message":"Tool invocation started","correlationId":"b91f9665-645b-417a-891f-723d3d391399","tool":"testsprite_generate_code_and_execute"}
 {"timestamp":"2026-05-14T16:58:19.005Z","level":"info","message":"Tool invocation completed","correlationId":"b91f9665-645b-417a-891f-723d3d391399","tool":"testsprite_generate_code_and_execute"}
+{"timestamp":"2026-05-14T17:31:25.502Z","level":"info","message":"Tool invocation started","correlationId":"1d3e4c82-4b87-4c67-8d22-9b657b821a83","tool":"testsprite_open_test_result_dashboard"}
+{"timestamp":"2026-05-14T17:31:25.531Z","level":"info","message":"Tool invocation completed","correlationId":"1d3e4c82-4b87-4c67-8d22-9b657b821a83","tool":"testsprite_open_test_result_dashboard"}
+{"timestamp":"2026-05-14T17:31:25.503Z","level":"debug","message":"Test modification params","correlationId":"1d3e4c82-4b87-4c67-8d22-9b657b821a83","tool":"testsprite_open_test_result_dashboard","context":{"projectPath":"c:\\Work\\catewebs\\catewebs"}}
+{"timestamp":"2026-05-14T17:31:25.531Z","level":"info","message":"Test result dashboard opened","correlationId":"1d3e4c82-4b87-4c67-8d22-9b657b821a83","tool":"testsprite_open_test_result_dashboard"}

@@ -1,5 +1,8 @@
 {
   "preCheck": {
     "enabled": true
-  }
+  },
+  "baseUrl": "${VERCEL_PREVIEW_URL}",
+  "testScope": "diff",
+  "localPort": 3000
 }
