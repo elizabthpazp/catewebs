@@ -4,7 +4,11 @@ const { compilerOptions } = require("./catewebs/tsconfig.json");
 module.exports = {
   rootDir: ".",
   testEnvironment: "node",
-  testMatch: ["<rootDir>/catewebs/src/**/*.test.ts", "<rootDir>/catewebs/src/**/*.test.tsx"],
+  testMatch: [
+    "<rootDir>/__tests__/**/*.test.js",
+    "<rootDir>/catewebs/src/**/*.test.ts",
+    "<rootDir>/catewebs/src/**/*.test.tsx"
+  ],
   transform: {
     "^.+\\.(ts|tsx)$": [
       "ts-jest",
@@ -13,7 +17,7 @@ module.exports = {
           ...compilerOptions,
           module: "CommonJS",
           moduleResolution: "node16",
-          rootDir: "./catewebs",
+          rootDir: ".",
           ignoreDeprecations: "5.0"
         }
       }
