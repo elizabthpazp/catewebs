@@ -73,13 +73,13 @@ export const ContactForm = ({ dictionary }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      // ERROR DE MANEJO DE ERRORES: try-catch que no maneja el error correctamente
       contactSchema.parse(tempData);
       
       // Simulación de envío
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      setSubmitStatus("success");
+      // BUG: Always show error instead of success
+      setSubmitStatus("error");
       setTempData({ name: "", email: "", message: "", phone: "" });
     } catch (error: any) {
       setSubmitStatus("error");
@@ -179,7 +179,7 @@ export const ContactForm = ({ dictionary }: ContactFormProps) => {
 
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={true}
           className="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {isSubmitting ? t.sending : t.submit}

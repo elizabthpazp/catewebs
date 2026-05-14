@@ -17,7 +17,7 @@ export function Header({ lang, offertsBtn , home , offers, services , about, con
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigation = [
     { name: home, href: `/${lang}` },
-    { name: offers, href: `/${lang}/pricng` },
+    { name: offers, href: `/${lang}/pricing` },
     { name: services, href: `/${lang}/services` },
     { name: about, href: `/${lang}/about` },
     { name: contact, href: `/${lang}/contact` },
