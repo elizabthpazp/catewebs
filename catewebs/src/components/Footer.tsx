@@ -1,10 +1,15 @@
 import Link from "next/link";
 import { links } from '../../links-web' 
+import { Locale } from '../../i18n-config'
 
 export default function Footer({
-  copy
+  copy,
+  lang,
+  contact
 }: {
-  copy: string 
+  copy: string,
+  lang: Locale,
+  contact: string
 }) {
   return (
     <footer className="text-center h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3 border-gray-500">
@@ -21,6 +26,20 @@ export default function Footer({
           {copy}
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
+        <Link
+          href={`/${lang}/contact`}
+          className="group"
+          aria-label="Contact"
+        >
+          <svg
+            className="h-6 w-6 fill-gray-500 group-hover:fill-gray-300"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </Link>
+
         <Link
           href={links.instagram}
           className="group"

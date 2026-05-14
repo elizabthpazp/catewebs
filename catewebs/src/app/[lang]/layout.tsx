@@ -74,9 +74,9 @@ export default async function RootLayout({ children, params }: { children: React
       
       <body className="font-sans light:bg-white dark:bg-slate-1 light:text-gray-800 dark:text-white text-gray-800">
       <Providers>
-        <Header lang={params.lang} offertsBtn={dictionary.request} home={dictionary.menu.home} offers={dictionary.menu.offers} services={dictionary.menu.services} about={dictionary.menu.about} />
+        <Header lang={params.lang} offertsBtn={dictionary.request} home={dictionary.menu.home} offers={dictionary.menu.offers} services={dictionary.menu.services} about={dictionary.menu.about} contact={dictionary.menu.contact} />
         {children}
-        <Footer copy={dictionary.copy} />
+        <Footer copy={dictionary.copy} lang={params.lang} contact={dictionary.menu.contact} />
       </Providers>
       <Whatsapp /> 
       <Analytics />

@@ -3,7 +3,8 @@
       "home": "Home",
       "offers": "Offers",
       "services": "Services",
-      "about": "About"
+      "about": "About",
+      "contact": "Contact"
      },
      "metaTitle": "Web Development | Digital Marketing | SEO | Design",
      "metaDescription": "CateWebs: We create your digital property",
@@ -120,5 +121,19 @@
             "description13": "Custom Stiker Pack",
             "description14": "Instagram feed design"
           }
-     }
+     },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with us",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "message": "Message",
+        "submit": "Send Message",
+        "sending": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Error sending message. Please try again."
+      }
+    }
 }
