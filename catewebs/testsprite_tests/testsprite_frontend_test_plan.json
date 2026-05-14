@@ -1,0 +1,712 @@
+[
+  {
+    "id": "TC001",
+    "title": "Discover the homepage hero and main service highlights",
+    "description": "This test verifies that a visitor can land on the English homepage, see the hero content and service highlights, and continue to the next key sections from there.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the homepage hero content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the service highlights are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Switch between English and Spanish from the homepage",
+    "description": "This test verifies that a visitor can switch locale on the homepage and continue browsing in the selected language.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Switch the site language to Spanish"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish homepage content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Switch the site language back to English"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the English homepage content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Navigate from the homepage to the pricing page",
+    "description": "This test verifies that a visitor can move from the English homepage to the pricing page using the header and see the pricing content.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the pricing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the plan tiers are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Navigate from the homepage to the services page",
+    "description": "This test verifies that a visitor can move from the English homepage to the services page using the header and see the services listing.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the services page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the services page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the service cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Navigate the public pages in Spanish from the header",
+    "description": "This test verifies that a Spanish-speaking visitor can use the header to move between About, Services, Pricing, and Contact while staying in Spanish.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /es"
+      },
+      {
+        "type": "action",
+        "description": "Click the header link to the About page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish About page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the header link to the Services page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish Services page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the header link to the Pricing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish Pricing page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the header link to the Contact page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish Contact page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Switch theme on the homepage",
+    "description": "This test verifies that a visitor can toggle the theme on the English homepage and see the site appearance change.",
+    "category": "Theme Switching",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the theme setting"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the site appearance changes between light and dark mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the homepage remains displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Open the contact page from the homepage hero",
+    "description": "This test verifies that a visitor can use the homepage contact call to action to reach the contact page.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the homepage contact call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Switch the site language from English to Spanish",
+    "description": "This test verifies that a visitor can switch from the English locale to the Spanish locale and see Spanish content.",
+    "category": "Language Switching",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Open the language selector"
+      },
+      {
+        "type": "action",
+        "description": "Select Spanish"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish homepage is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page content is displayed in Spanish"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Open the English about page from the header",
+    "description": "This test verifies that a visitor can use the header to reach the About page from the English site.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the header link to the About page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the About page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the English content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "View pricing tiers in English",
+    "description": "A visitor can open the English pricing page and review the three available plans with their feature lists.",
+    "category": "Pricing Plans Display",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/pricing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the three pricing tiers are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify each pricing tier shows a feature list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Open the Telegram destination from the homepage hero",
+    "description": "This test verifies that a visitor can use the homepage Telegram call to action and reach the external messaging destination.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the homepage Telegram call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the external messaging destination is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "View pricing tiers in Spanish",
+    "description": "A Spanish-speaking visitor can open the Spanish pricing page and review the same three plans in Spanish.",
+    "category": "Pricing Plans Display",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /es/pricing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the three pricing tiers are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing content is shown in Spanish"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Navigate from the homepage to the contact page",
+    "description": "This test verifies that a visitor can move from the English homepage to the contact page using the header and see the contact section.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the contact page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Review pricing plans and use the Telegram call to action",
+    "description": "This test verifies that a visitor can review the pricing tiers and open the Telegram destination from the pricing page.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/pricing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing plans are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the pricing Telegram call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the external messaging destination is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Navigate from the homepage to the about page",
+    "description": "This test verifies that a visitor can move from the English homepage to the about page using the header and see the company information.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the about page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the about page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the company description is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "View embedded Instagram content and open the Instagram destination",
+    "description": "This test verifies that a visitor can view the Instagram embed on the homepage and follow its link to the external Instagram destination.",
+    "category": "Instagram Embed",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Instagram embed is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the Instagram link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the external Instagram destination is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Browse the services page in English",
+    "description": "This test verifies that an English visitor can open the services page and see the full set of service cards with their descriptions.",
+    "category": "Services Listing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/services"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the service cards are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the service descriptions are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Use the mobile menu to reach a destination page",
+    "description": "This test verifies that a mobile visitor can open the hamburger menu, choose a destination, and reach the selected page with the menu closed.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Set the viewport to a small mobile size"
+      },
+      {
+        "type": "action",
+        "description": "Open the mobile navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link to the services page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the services page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the mobile navigation menu is closed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Browse the services page in Spanish",
+    "description": "This test verifies that a Spanish-speaking visitor can open the Spanish services page and see the service cards in Spanish.",
+    "category": "Services Listing",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /es/services"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the service cards are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Spanish service descriptions are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC020",
+    "title": "Contact via Telegram from pricing",
+    "description": "A visitor can start on the English pricing page and use the Telegram call to action to reach the external messaging destination.",
+    "category": "Pricing Plans Display",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/pricing"
+      },
+      {
+        "type": "action",
+        "description": "Click the Telegram call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an external messaging destination is opened"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC021",
+    "title": "Switch theme on the contact page",
+    "description": "This test verifies that a visitor can toggle the theme on the contact page and see the page appearance change without losing the form.",
+    "category": "Theme Switching",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the theme setting"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the site appearance changes between light and dark mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form remains displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC022",
+    "title": "Complete and submit the contact form successfully",
+    "description": "This test verifies that a visitor can fill out the contact form on the English contact page and see successful submission feedback.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a valid full name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with a valid email address"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a valid message"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form submission state is shown"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Submit the contact form successfully in English",
+    "description": "A visitor can fill out the English contact form with valid details and see a success confirmation after submission.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Alex Taylor"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with alex.taylor@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the phone field with a valid phone number"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a short inquiry about a website project"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the submitted message is not shown as an error state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Use the mobile menu to navigate to another page",
+    "description": "This test verifies that a mobile visitor can open the hamburger menu, choose a destination, and return to browsing with the menu closed.",
+    "category": "Homepage Hero and Call to Action",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Set the browser viewport to a mobile size"
+      },
+      {
+        "type": "action",
+        "description": "Open the mobile navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to the Services page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Services page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the mobile navigation menu is closed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "Submit the contact form successfully in Spanish",
+    "description": "A Spanish-speaking visitor can fill out the Spanish contact form with valid details and see a success confirmation after submission.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /es/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Alex Taylor"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with alex.taylor@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the phone field with a valid phone number"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a short inquiry about a website project"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the success feedback is shown in Spanish"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "See validation feedback for incomplete contact form",
+    "description": "A visitor can try to submit the English contact form without required details and see validation feedback.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form without entering required details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation errors are visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the form is not submitted successfully"
+      }
+    ],
+    "priority": "Low"
+  }
+]
