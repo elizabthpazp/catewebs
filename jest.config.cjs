@@ -1,4 +1,25 @@
+const { pathsToModuleNameMapper } = require("ts-jest");
+const { compilerOptions } = require("./catewebs/tsconfig.json");
+
 module.exports = {
   rootDir: ".",
-  projects: ["<rootDir>/catewebs/jest.config.cjs"]
+  testEnvironment: "node",
+  testMatch: ["<rootDir>/catewebs/src/**/*.test.ts", "<rootDir>/catewebs/src/**/*.test.tsx"],
+  transform: {
+    "^.+\\.(ts|tsx)$": [
+      "ts-jest",
+      {
+        tsconfig: {
+          ...compilerOptions,
+          module: "CommonJS",
+          moduleResolution: "node16",
+          rootDir: "./catewebs",
+          ignoreDeprecations: "5.0"
+        }
+      }
+    ]
+  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
+    prefix: "<rootDir>/catewebs/"
+  })
 };
