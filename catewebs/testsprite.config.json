@@ -1,5 +1,5 @@
 {
   "preCheck": {
-    "enabled": false
+    "enabled": true
   }
 }
