@@ -1,9 +1,13 @@
 {
-	"devDependencies": {
-		"jest": "^30.4.2",
-		"@types/jest": "^30.0.0",
-		"ts-jest": "^29.4.9",
-		"@testing-library/react": "^16.3.2",
-		"@testing-library/jest-dom": "^6.9.1"
-	}
+  "private": true,
+  "scripts": {
+    "test": "npm --prefix catewebs test"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9"
+  }
 }
