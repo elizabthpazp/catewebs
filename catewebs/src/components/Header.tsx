@@ -13,13 +13,14 @@ import { links } from "../../links-web";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher"; 
 
-export function Header({ lang, offertsBtn , home , offers, services , about }: { lang: Locale, offertsBtn: string, home: string, offers: string, services: string, about: string }) {
+export function Header({ lang, offertsBtn , home , offers, services , about, contact }: { lang: Locale, offertsBtn: string, home: string, offers: string, services: string, about: string, contact: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigation = [
     { name: home, href: `/${lang}` },
     { name: offers, href: `/${lang}/pricing` },
     { name: services, href: `/${lang}/services` },
     { name: about, href: `/${lang}/about` },
+    { name: contact, href: `/${lang}/contact` },
   ];
   let pathname = usePathname(); 
   return (

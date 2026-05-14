@@ -110,6 +110,12 @@ export default async function IndexPage({
           >
             {dictionary.cta}
           </Link>
+          <Link
+            href={`/${lang}/contact`}
+            className="w-[200px] bg-gray-600 py-3 px-5 block h5 hover:bg-gray-500 rounded-2xl text-white"
+          >
+            Contact Form
+          </Link>
         </div>
         <p className="light:text-gray-800 dark:text-gray-300 text-gray-800"> {dictionary.free}</p>
       </div>
