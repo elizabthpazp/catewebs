@@ -708,5 +708,178 @@
       }
     ],
     "priority": "Low"
+  },
+  {
+    "id": "TC027",
+    "title": "Verify contact form submit button is enabled for valid input",
+    "description": "This test verifies that the contact form submit button becomes enabled when the user fills in all required fields with valid data.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with John Doe"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with john.doe@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with I would like to request a quote for a website"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the submit button is enabled and clickable"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC028",
+    "title": "Click the submit button on contact form",
+    "description": "This test verifies that the user can click the submit button after filling in all required fields.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Maria Garcia"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with maria.garcia@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with Hello, I need a website"
+      },
+      {
+        "type": "action",
+        "description": "Click the submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the form was submitted successfully with a success message"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC029",
+    "title": "Contact form shows success message after valid submission",
+    "description": "This test verifies that after submitting a valid contact form, a green success message is displayed to the user.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Test User"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with test.user@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with This is a test message for the contact form"
+      },
+      {
+        "type": "action",
+        "description": "Click the submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a green success message appears saying the message was sent successfully"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no error message is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC030",
+    "title": "Submit contact form with phone number optional field",
+    "description": "This test verifies that the contact form can be submitted without filling in the optional phone field.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Jane Smith"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with jane.smith@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with Interested in your services"
+      },
+      {
+        "type": "action",
+        "description": "Click the submit button without filling phone field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the form is submitted successfully"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation message is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC031",
+    "title": "Contact form error message should not appear on valid submission",
+    "description": "This test verifies that no error message appears when the contact form is submitted with valid data.",
+    "category": "Contact Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Carlos Rodriguez"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with carlos.rodriguez@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with Please contact me about web development"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no red error message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the submission result shows success not error"
+      }
+    ],
+    "priority": "High"
   }
 ]

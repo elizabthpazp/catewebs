@@ -40,37 +40,37 @@ async def run_test():
         except Exception:
             pass
         
-        # -> Open the English contact page (/en/contact) by clicking the 'Contact Form' button.
-        # link "Contact Form"
-        elem = page.locator("xpath=/html/body/div[3]/div/a[2]").nth(0)
+        # -> Open the English contact page (navigate to /en/contact) by clicking the 'Contact' link.
+        # link "Contact"
+        elem = page.locator("xpath=/html/body/header/nav/div[3]/a[5]").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.click()
         
-        # -> Fill the Name field with 'Alex Taylor' (input index 446) and then complete the rest of the form and submit
+        # -> Fill the name field with 'Alex Taylor' (index 443) as the next immediate action.
         # text input name="name"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("Alex Taylor")
         
-        # -> Fill the Name field with 'Alex Taylor' (input index 446) and then complete the rest of the form and submit
+        # -> Fill the name field with 'Alex Taylor' (index 443) as the next immediate action.
         # email input name="email"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[2]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("alex.taylor@example.com")
         
-        # -> Fill the Name field with 'Alex Taylor' (input index 446) and then complete the rest of the form and submit
+        # -> Fill the name field with 'Alex Taylor' (index 443) as the next immediate action.
         # tel input name="phone"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[3]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("123-456-7890")
         
-        # -> Fill the Name field with 'Alex Taylor' (input index 446) and then complete the rest of the form and submit
+        # -> Fill the name field with 'Alex Taylor' (index 443) as the next immediate action.
         # name="message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[4]/textarea").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
-        await elem.fill("Hi \u2014 I'm interested in a website project. Could you provide a quote and the next steps?")
+        await elem.fill("Hello, I'm interested in a website project. Could you provide a quote and timeline? Thanks!")
         
-        # -> Fill the Name field with 'Alex Taylor' (input index 446) and then complete the rest of the form and submit
+        # -> Fill the name field with 'Alex Taylor' (index 443) as the next immediate action.
         # button "Send Message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/button").nth(0)
         await elem.wait_for(state="visible", timeout=10000)

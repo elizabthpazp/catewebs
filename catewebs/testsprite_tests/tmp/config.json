@@ -6,12 +6,18 @@
   "executionArgs": {
     "projectName": "catewebs",
     "projectPath": "c:\\Work\\catewebs\\catewebs",
-    "testIds": [],
-    "additionalInstruction": "",
+    "testIds": [
+      "TC027",
+      "TC028",
+      "TC029",
+      "TC030",
+      "TC031"
+    ],
+    "additionalInstruction": "The contact form has a bug: the submit button is always disabled and cannot be clicked. Test should verify the button is clickable and that a success message appears after submission.",
     "serverMode": "production",
     "envs": {
       "API_KEY": "sk-user-v4QrK3ldPkNgP6RXShTEt9OtGrWSF408rrKT0dgrSTOJDzN5z39qgQtoOWJ37LEbEbwxq-cKoRkOzFcskeTGjM9tufjc2i3-V2Zv6VfsW8MomViFdljMW3pmTyjjRFz2a_U"
     }
   },
-  "serverPort": 65334
+  "serverPort": 60686
 }

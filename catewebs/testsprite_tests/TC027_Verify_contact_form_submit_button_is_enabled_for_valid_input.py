@@ -40,31 +40,31 @@ async def run_test():
         except Exception:
             pass
         
-        # -> Open the English contact page (navigate to /en/contact) by clicking the 'Contact' link in the header.
+        # -> Open the contact page or contact form by clicking the 'Contact' navigation link (or the in-page 'Contact Form' button) to reveal the form fields.
         # link "Contact"
         elem = page.locator("xpath=/html/body/header/nav/div[3]/a[5]").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.click()
         
-        # -> Fill the Name, Email and Message fields with valid data, then click Send Message to submit the form and verify a success confirmation.
+        # -> Fill the Name field with 'John Doe' (input into element index 440).
         # text input name="name"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("John Doe")
         
-        # -> Fill the Name, Email and Message fields with valid data, then click Send Message to submit the form and verify a success confirmation.
+        # -> Fill the Name field with 'John Doe' (input into element index 440).
         # email input name="email"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[2]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
-        await elem.fill("johndoe@example.com")
+        await elem.fill("john.doe@example.com")
         
-        # -> Fill the Name, Email and Message fields with valid data, then click Send Message to submit the form and verify a success confirmation.
+        # -> Fill the Name field with 'John Doe' (input into element index 440).
         # name="message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[4]/textarea").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
-        await elem.fill("Hello, I would like to learn more about your services. Please contact me with more information. Thank you.")
+        await elem.fill("I would like to request a quote for a website")
         
-        # -> Fill the Name, Email and Message fields with valid data, then click Send Message to submit the form and verify a success confirmation.
+        # -> Fill the Name field with 'John Doe' (input into element index 440).
         # button "Send Message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/button").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
