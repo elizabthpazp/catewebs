@@ -9,10 +9,7 @@ async def run_test():
     context = None
 
     try:
-        # Start a Playwright session in asynchronous mode
         pw = await async_api.async_playwright().start()
-
-        # Launch a Chromium browser in headless mode with custom arguments
         browser = await pw.chromium.launch(
             headless=True,
             args=[
@@ -22,17 +19,9 @@ async def run_test():
                 "--single-process"
             ],
         )
-
-        # Create a new browser context (like an incognito window)
         context = await browser.new_context()
-        # Wider default timeout to match the agent's DOM-stability budget;
-        # auto-waiting Playwright APIs (expect, locator.wait_for) inherit this.
         context.set_default_timeout(15000)
-
-        # Open a new page in the browser context
         page = await context.new_page()
-
-        # Interact with the page elements to simulate user flow
         # -> navigate
         await page.goto("http://localhost:3000")
         try:
@@ -40,42 +29,33 @@ async def run_test():
         except Exception:
             pass
         
-        # -> Open the contact form by clicking the 'Contact Form' button/link so the form fields become visible.
-        # link "Contact Form"
-        elem = page.locator("xpath=/html/body/div[3]/div/a[2]").nth(0)
+        # -> Open the contact page by clicking the 'Contact' link in the navigation.
+        # link "Contact"
+        elem = page.locator("xpath=/html/body/header/nav/div[3]/a[5]").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.click()
         
-        # -> Fill the Name, Email and Message fields (leave Phone empty), then click the 'Send Message' submit button.
+        # -> Fill the Name, Email and Message fields (leave Phone blank), then locate the Send Message button so it can be clicked.
         # text input name="name"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("Jane Smith")
         
-        # -> Fill the Name, Email and Message fields (leave Phone empty), then click the 'Send Message' submit button.
+        # -> Fill the Name, Email and Message fields (leave Phone blank), then locate the Send Message button so it can be clicked.
         # email input name="email"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[2]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("jane.smith@example.com")
         
-        # -> Fill the Name, Email and Message fields (leave Phone empty), then click the 'Send Message' submit button.
+        # -> Fill the Name, Email and Message fields (leave Phone blank), then locate the Send Message button so it can be clicked.
         # name="message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[4]/textarea").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("Interested in your services")
         
-        # -> Fill the Name, Email and Message fields (leave Phone empty), then click the 'Send Message' submit button.
-        # button "Send Message"
-        elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/button").nth(0)
-        await elem.wait_for(state="visible", timeout=10000)
-        await elem.click()
-        
-        # --> Test passed — verified by AI agent
-        frame = context.pages[-1]
-        current_url = await frame.evaluate("() => window.location.href")
-        assert current_url is not None, "Test completed successfully"
+        # --> Test failed (AST guard fallback)
+        raise AssertionError("Test failed during agent run: " + "TEST FAILURE The contact form could not be submitted \u2014 the Send Message button is disabled and not clickable, preventing form submission without the optional phone field. Observations: - The Name, Email and Message fields contain the expected values (Jane Smith, jane.smith@example.com, Interested in your services). - The Send Message button is displayed but appears disabled (grayed out) and is ...")
         await asyncio.sleep(5)
-
     finally:
         if context:
             await context.close()

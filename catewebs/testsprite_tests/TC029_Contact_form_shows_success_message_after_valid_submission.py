@@ -40,40 +40,33 @@ async def run_test():
         except Exception:
             pass
         
-        # -> Click the 'Contact' navigation link to open the contact page (/en/contact) and inspect the form fields.
+        # -> Open the Contact page/section by clicking the 'Contact' link.
         # link "Contact"
         elem = page.locator("xpath=/html/body/header/nav/div[3]/a[5]").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.click()
         
-        # -> Fill the Name, Email, and Message fields with the test values, click the Send Message submit button, then verify a green success message appears and no error messages are shown.
+        # -> Fill the Name, Email, and Message fields with the provided test data, then locate the form submit button on the page.
         # text input name="name"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("Test User")
         
-        # -> Fill the Name, Email, and Message fields with the test values, click the Send Message submit button, then verify a green success message appears and no error messages are shown.
+        # -> Fill the Name, Email, and Message fields with the provided test data, then locate the form submit button on the page.
         # email input name="email"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[2]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("test.user@example.com")
         
-        # -> Fill the Name, Email, and Message fields with the test values, click the Send Message submit button, then verify a green success message appears and no error messages are shown.
+        # -> Fill the Name, Email, and Message fields with the provided test data, then locate the form submit button on the page.
         # name="message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[4]/textarea").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("This is a test message for the contact form")
         
-        # -> Fill the Name, Email, and Message fields with the test values, click the Send Message submit button, then verify a green success message appears and no error messages are shown.
-        # button "Send Message"
-        elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/button").nth(0)
-        await elem.wait_for(state="visible", timeout=10000)
-        await elem.click()
-        
-        # --> Test passed — verified by AI agent
-        frame = context.pages[-1]
-        current_url = await frame.evaluate("() => window.location.href")
-        assert current_url is not None, "Test completed successfully"
+        # --> Assertions to verify final state
+        assert await page.locator("xpath=//*[contains(., 'the message was sent successfully')]").nth(0).is_visible(), "A green success message saying the message was sent successfully should be visible after submitting the contact form"
+        assert not await page.locator("xpath=//*[contains(., 'Error')]").nth(0).is_visible(), "No error message should be displayed after submitting the contact form"
         await asyncio.sleep(5)
 
     finally:

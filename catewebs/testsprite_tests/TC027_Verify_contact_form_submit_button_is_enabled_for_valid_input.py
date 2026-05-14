@@ -40,40 +40,32 @@ async def run_test():
         except Exception:
             pass
         
-        # -> Open the contact page or contact form by clicking the 'Contact' navigation link (or the in-page 'Contact Form' button) to reveal the form fields.
-        # link "Contact"
-        elem = page.locator("xpath=/html/body/header/nav/div[3]/a[5]").nth(0)
+        # -> Open the contact form by clicking the 'Contact Form' button or Contact link so the form fields become visible.
+        # link "Contact Form"
+        elem = page.locator("xpath=/html/body/div[3]/div/a[2]").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.click()
         
-        # -> Fill the Name field with 'John Doe' (input into element index 440).
+        # -> Fill the Name, Email, and Message fields with valid data and scroll to reveal the submit button so it can be checked for enabled/clickable state.
         # text input name="name"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("John Doe")
         
-        # -> Fill the Name field with 'John Doe' (input into element index 440).
+        # -> Fill the Name, Email, and Message fields with valid data and scroll to reveal the submit button so it can be checked for enabled/clickable state.
         # email input name="email"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[2]/input").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("john.doe@example.com")
         
-        # -> Fill the Name field with 'John Doe' (input into element index 440).
+        # -> Fill the Name, Email, and Message fields with valid data and scroll to reveal the submit button so it can be checked for enabled/clickable state.
         # name="message"
         elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/div[4]/textarea").nth(0)
         await elem.wait_for(state="visible", timeout=10000)
         await elem.fill("I would like to request a quote for a website")
         
-        # -> Fill the Name field with 'John Doe' (input into element index 440).
-        # button "Send Message"
-        elem = page.locator("xpath=/html/body/div/div/div/div[2]/form/button").nth(0)
-        await elem.wait_for(state="visible", timeout=10000)
-        await elem.click()
-        
-        # --> Test passed — verified by AI agent
-        frame = context.pages[-1]
-        current_url = await frame.evaluate("() => window.location.href")
-        assert current_url is not None, "Test completed successfully"
+        # --> Assertions to verify final state
+        assert await page.locator("xpath=//*[contains(., 'Submit')]" ).nth(0).is_visible(), "The submit button should be enabled and clickable after filling all required fields."
         await asyncio.sleep(5)
 
     finally:
