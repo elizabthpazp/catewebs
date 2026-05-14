@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "npm --prefix catewebs test"
+    "test": "jest --config jest.config.cjs --runInBand"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
