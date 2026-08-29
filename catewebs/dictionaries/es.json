@@ -3,7 +3,8 @@
       "home": "Inicio",
       "offers": "Ofertas",
       "services": "Servicios",
-      "about": "Sobre nosotros"
+      "about": "Sobre nosotros",
+      "contact": "Contacto"
     },
     "metaTitle": "Desarrollo Web | Marketing Digital | SEO | Diseño",
     "metaDescription": "CateWebs: Creamos tu propiedad digital",
@@ -119,6 +120,20 @@
         "description12": "Localización en Google Maps",
         "description13": "Pack de Stikers personalizados",
         "description14": "Diseño de feed de instagram"
+      }
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "description": "Ponte en contacto con nosotros",
+      "form": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Teléfono (opcional)",
+        "message": "Mensaje",
+        "submit": "Enviar mensaje",
+        "sending": "Enviando...",
+        "success": "Mensaje enviado exitosamente!",
+        "error": "Error al enviar mensaje. Por favor intenta de nuevo."
       }
     }
 }

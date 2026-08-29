@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest --config jest.config.cjs --runInBand"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9"
+  }
+}
